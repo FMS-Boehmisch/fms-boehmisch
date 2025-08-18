@@ -1,0 +1,96 @@
+/* Basic Reset & Variables */
+:root{
+  --bg:#0f1320;       /* dark hero */
+  --brand:#1e90ff;    /* accent blue */
+  --card:#ffffff;
+  --text:#0b0f17;
+  --muted:#6b7280;
+  --alt:#f6f8fb;
+}
+
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,Helvetica,sans-serif;color:var(--text);scroll-behavior:smooth}
+
+.container{width:min(1100px, 92%); margin:auto}
+
+/* Splash */
+#splash{
+  position:fixed; inset:0; background:var(--bg);
+  display:grid; place-items:center; z-index:9999;
+  animation: splashOut 1.2s ease 1.8s forwards;
+}
+.logo-wrap{ text-align:center; color:#fff; transform:translateY(8px); animation: float 1.8s ease-in-out infinite alternate }
+.logo-circle{
+  width:84px;height:84px;border-radius:50%;display:grid;place-items:center;
+  background:linear-gradient(135deg, var(--brand), #4f46e5); font-weight:800; letter-spacing:1px; box-shadow:0 8px 24px rgba(0,0,0,.35);
+}
+.logo-text{margin-top:12px;font-size:28px;font-weight:700;letter-spacing:.5px}
+.logo-slogan{margin-top:2px;opacity:.85}
+
+@keyframes splashOut{to{opacity:0;visibility:hidden}}
+@keyframes float{from{transform:translateY(8px)} to{transform:translateY(-4px)}}
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:10; background:#fffcc;
+  background:rgba(255,255,255,.86); backdrop-filter:saturate(180%) blur(8px);
+  border-bottom:1px solid #eef1f5;
+}
+.site-header .container{display:flex; align-items:center; justify-content:space-between; padding:10px 0}
+.brand{font-weight:700;text-decoration:none;color:var(--text)}
+#nav{display:flex; gap:18px; align-items:center}
+#nav a{color:var(--text); text-decoration:none; font-weight:600}
+#nav .btn{padding:10px 14px;border-radius:10px;border:1px solid #e5e7eb}
+.burger{display:none;background:none;border:0;padding:6px;cursor:pointer}
+.burger span{display:block;width:22px;height:2px;background:#111;margin:5px 0}
+
+/* Hero */
+.hero{
+  background: radial-gradient(1200px 500px at 20% 0%, #111a2b 0, #0f1320 60%, #0f1320 100%);
+  color:#fff; padding:84px 0 72px;
+}
+.hero-content h1{font-size:38px; line-height:1.1; margin:0 0 12px}
+.hero-content p{opacity:.9; max-width:700px}
+.highlight{color:var(--brand)}
+.cta-row{margin-top:20px; display:flex; gap:12px; flex-wrap:wrap}
+
+/* Sections */
+.section{padding:64px 0}
+.section.alt{background:var(--alt)}
+h2{font-size:28px;margin:0 0 18px}
+
+/* Cards & Grid */
+.grid{display:grid; gap:16px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.card{background:var(--card); padding:18px; border:1px solid #e5e7eb; border-radius:14px; box-shadow:0 4px 14px rgba(0,0,0,.04)}
+.card h3{margin:0 0 6px}
+.badges{display:flex;gap:12px;flex-wrap:wrap;padding:0;list-style:none}
+.badges li{background:#eef2ff;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px}
+
+/* Gallery */
+.gallery{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.gallery img{width:100%;height:160px;object-fit:cover;border-radius:12px;border:1px solid #e5e7eb}
+
+/* Contact */
+.contact-grid{display:grid; gap:18px; grid-template-columns:1.2fr .8fr}
+label{display:block;font-weight:600;margin-bottom:10px}
+input,textarea{width:100%;padding:10px 12px;margin-top:6px;border:1px solid #e5e7eb;border-radius:10px;outline:none}
+input:focus,textarea:focus{border-color:#c7d2fe; box-shadow:0 0 0 3px rgba(30,144,255,.12)}
+.map{height:180px;border:1px dashed #cbd5e1;border-radius:12px;display:grid;place-items:center;color:var(--muted)}
+
+/* Buttons */
+.btn{display:inline-block; text-decoration:none; font-weight:700; border:1px solid #e5e7eb; padding:10px 14px; border-radius:12px}
+.btn.primary{background:var(--brand); border-color:transparent; color:#fff}
+.btn:hover{transform:translateY(-1px); transition:.15s ease}
+
+/* Footer */
+.site-footer{padding:28px 0;border-top:1px solid #eef1f5;background:#fff}
+.site-footer a{color:var(--text)}
+
+/* Responsive */
+@media (max-width: 860px){
+  .contact-grid{grid-template-columns:1fr}
+  #nav{position:absolute; right:16px; top:56px; flex-direction:column; background:#fff; border:1px solid #e5e7eb; padding:12px; border-radius:12px; display:none}
+  #nav.show{display:flex}
+  .burger{display:block}
+}
