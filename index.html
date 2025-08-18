@@ -5,10 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FMS Böhmisch – Hausmeisterservice & Facility Management</title>
   <meta name="description" content="FMS Böhmisch: Hausmeisterservice, Gebäudereinigung, Gartenpflege, Winterdienst, Kleinreparaturen.">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="styles.css?v=1">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <base href="https://fms-boehmisch.github.io/fms-boehmisch/">
+  <!-- Falls du bereits unter fms-boehmisch.de lädst, ist die Base optional. -->
+  <base href="https://fms-boehmisch.de/">
+  <script defer data-domain="fms-boehmisch.de" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
   <!-- Intro Splash -->
@@ -52,30 +55,56 @@
   <section id="leistungen" class="section">
     <div class="container">
       <h2>Unsere Leistungen</h2>
+
       <div class="grid cards">
         <article class="card">
           <h3>Hausmeisterservice</h3>
-          <p>Regelmäßige Objektbetreuung, Wartung, Kleinreparaturen, Haustechnik-Kontrollen.</p>
+          <p>Regelmäßige Objektbetreuung, Wartung, Kleinreparaturen und Haustechnik-Kontrollen.</p>
         </article>
+
         <article class="card">
           <h3>Gebäudereinigung</h3>
-          <p>Treppenhaus-, Büro- und Glasreinigung – gründlich und termingerecht.</p>
+          <p>Treppenhaus-, Büro- und Glasreinigung – gründlich, zuverlässig und termingerecht.</p>
         </article>
+
         <article class="card">
           <h3>Gartenpflege</h3>
-          <p>Rasen, Hecken, Beete & Saisonpflege – gepflegte Außenanlagen das ganze Jahr.</p>
+          <p>Rasenmähen, Hecken- & Strauchschnitt, Beetpflege, Bewässerung & Saisonpflege.</p>
         </article>
+
         <article class="card">
           <h3>Winterdienst</h3>
-          <p>Räumen & Streuen mit Haftungssicherheit – 24/7 nach Bedarf.</p>
+          <p>Räumen & Streuen mit Haftungssicherheit nach Bedarf – Wege und Flächen sicher halten.</p>
         </article>
+
         <article class="card">
-          <h3>24/7-Notdienst</h3>
-          <p>Schnelle Hilfe bei Havarien, Wasser, Strom, Türöffnungen nach Absprache.</p>
+          <h3>Kleinreparaturen & Montage</h3>
+          <p>Leuchtmittel, Schlösser, Silikonfugen, Beschläge, Sockelleisten, Möbel-/Regalmontage.</p>
         </article>
+
+        <article class="card">
+          <h3>Objektkontrollen & Schließdienst</h3>
+          <p>Regelmäßige Rundgänge, Dokumentation von Mängeln, Zählerstände, Tür-/Fensterkontrollen.</p>
+        </article>
+
+        <article class="card">
+          <h3>Müllmanagement</h3>
+          <p>Bereitstellung & Rückstellung, Reinigungen der Standplätze, Sortier- und Sperrmüllhilfe.</p>
+        </article>
+
+        <article class="card">
+          <h3>Wege- & Pflasterreinigung</h3>
+          <p>Kehr- und Hochdruckreinigung, Moos- & Unkrautentfernung auf Wegen und Höfen.</p>
+        </article>
+
+        <article class="card">
+          <h3>Entrümpelung & Kleintransporte</h3>
+          <p>Keller, Garagen, Wohnungen – fachgerechte Entsorgung inkl. Übergabereinigung.</p>
+        </article>
+
         <article class="card">
           <h3>Individuelle Verträge</h3>
-          <p>Monatspauschalen, Stundenpreise und feste Service-Level nach Wunsch.</p>
+          <p>Monatspauschalen, Stundenpreise und feste Service-Level – passend zu Ihrem Objekt.</p>
         </article>
       </div>
     </div>
@@ -85,14 +114,15 @@
   <section id="referenzen" class="section alt">
     <div class="container">
       <h2>Referenzen & Projekte</h2>
-      <p>Hier zeigen wir Vorher–Nachher-Bilder und aktuelle Baustellen. Einfach Bilder in <code>/assets/img/</code> austauschen.</p>
+      <p>Vorher-/Nachher-Bilder und aktuelle Baustellen. Einfach die Dateien <code>ref1.jpg</code> … <code>ref6.jpg</code> im Projektordner austauschen.</p>
+
       <div class="grid gallery">
-        <img src="ref1.jpg" alt="Referenz 1"> loading="lazy">
-        <img src="ref2.jpg" alt="Referenz 2"> loading="lazy">
-        <img src="ref3.jpg" alt="Referenz 3"> loading="lazy">
-        <img src="ref4.jpg" alt="Referenz 4"> loading="lazy">
-        <img src="ref5.jpg" alt="Referenz 5"> loading="lazy">
-        <img src="ref6.jpg" alt="Referenz 6"> loading="lazy">
+        <img src="ref1.jpg" alt="Referenz 1" loading="lazy">
+        <img src="ref2.jpg" alt="Referenz 2" loading="lazy">
+        <img src="ref3.jpg" alt="Referenz 3" loading="lazy">
+        <img src="ref4.jpg" alt="Referenz 4" loading="lazy">
+        <img src="ref5.jpg" alt="Referenz 5" loading="lazy">
+        <img src="ref6.jpg" alt="Referenz 6" loading="lazy">
       </div>
     </div>
   </section>
@@ -115,8 +145,10 @@
   <section id="kontakt" class="section alt">
     <div class="container">
       <h2>Kontakt</h2>
+
       <div class="contact-grid">
-        <form id="contactForm" class="card" onsubmit="return handleSubmit(event)">
+        <!-- Kontaktformular (FormSubmit – kein eigenes Backend nötig) -->
+        <form class="card" action="https://formsubmit.co/fmsboehmisch@web.de" method="POST">
           <label>Ihr Name
             <input type="text" name="name" required>
           </label>
@@ -126,15 +158,35 @@
           <label>Nachricht
             <textarea name="message" rows="5" required></textarea>
           </label>
+
+          <!-- FormSubmit Optionen -->
+          <input type="hidden" name="_subject" value="Neue Anfrage über fms-boehmisch.de">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://fms-boehmisch.de/danke.html">
+          <!-- Honeypot gegen Spam -->
+          <input type="text" name="_honey" style="display:none">
+
           <button class="btn primary" type="submit">Senden</button>
-          <p class="form-note">Dieses Formular nutzt <strong>mailto:</strong> (kein Backend). Alternativ unten direkt per E‑Mail/WhatsApp kontaktieren.</p>
+          <p class="form-note">Alternativ per Telefon oder E-Mail – wir melden uns schnell zurück.</p>
         </form>
+
+        <!-- Kontaktdaten + Google Maps -->
         <div class="card">
           <h3>Direkt erreichen</h3>
-          <p><strong>Telefon:</strong> <a href="tel:+491234567890">+49 151 561 20527</a></p>
+          <p><strong>Telefon:</strong> <a href="tel:+4915156120527">+49 151 561 20527</a></p>
           <p><strong>E-Mail:</strong> <a href="mailto:fmsboehmisch@web.de">fmsboehmisch@web.de</a></p>
           <p><strong>Standort:</strong> Deutschland</p>
-          <div id="map" class="map">Google Maps einbinden? Ersetzt diesen Platzhalter später.</div>
+
+          <!-- Google Maps (responsive) -->
+          <div class="map-wrap" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:12px;">
+            <iframe
+              title="Google Maps – FMS Böhmisch"
+              src="https://www.google.com/maps/place/FMS+B%C3%B6hmisch/@48.7098387,13.3590066,17z/data=!3m1!4b1!4m6!3m5!1s0x4774fb76371ac27f:0xd11179f0093a7e64!8m2!3d48.7098352!4d13.3615815!16s%2Fg%2F11x6y2tzw2?authuser=3&entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D"
+              width="600" height="450" style="border:0;position:absolute;top:0;left:0;width:100%;height:100%;"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <!-- Wenn du eine genaue Adresse anzeigen willst, ersetze die src-URL durch den Embed-Link deiner Adresse. -->
         </div>
       </div>
     </div>
