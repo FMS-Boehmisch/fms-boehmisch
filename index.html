@@ -195,12 +195,17 @@
       </div>
     </div>
   </section>
-
   <footer class="site-footer">
-    <div class="container">
-      <div>© <span id="year"></span> FMS Böhmisch • <a href="#">Impressum</a> • <a href="#">Datenschutz</a></div>
+  <div class="container">
+    <div>© <span id="year"></span> FMS Böhmisch • 
+      <a href="/impressum.html">Impressum</a> • 
+      <a href="/datenschutz.html">Datenschutz</a>
     </div>
-  </footer>
+  </div>
+</footer>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 
   <script src="app.js?v=1"></script>
 </body>
