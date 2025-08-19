@@ -112,12 +112,12 @@ input:focus,textarea:focus{border-color:#c7d2fe; box-shadow:0 0 0 3px rgba(30,14
 }
 
 /* Arbeiten ansehen Button */
-.btn-arbeiten {
+.btn btn-arbeiten {
   background: #1e90ff);   /* dein Blau */
   color: #fff;
   border: none;
 }
-.btn-arbeiten:hover {
+.btn btn-arbeiten:hover {
   background: #1565c0; /* dunkleres Blau beim Hover */
 }
 
