@@ -22,7 +22,7 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 }
 .splash-logo{
   /* skaliert zwischen 160px und 360px */
-  width: clamp(160px, 30vw, 360px);
+  width: clamp(180px, 32vw, 480px);
   max-width: 90vw;
   height: auto;
   object-fit: contain;
@@ -34,7 +34,7 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 
 /* sehr kleine Phones */
 @media (max-width: 480px){
-  .splash-logo{ width: clamp(140px, 55vw, 300px); }
+  .splash-logo{ width: clamp(160px, 56vw, 320px); }
 }
 
 /* Nach dem Einblenden automatisch ausblenden
