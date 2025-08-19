@@ -113,7 +113,7 @@ input:focus,textarea:focus{border-color:#c7d2fe; box-shadow:0 0 0 3px rgba(30,14
 
 /* Arbeiten ansehen Button */
 .btn-arbeiten {
-  background: #6c63ff;   /* lila Beispiel */
+  background: var(--brand);   /* dein Blau */
   color: #fff;
   border: none;
 }
