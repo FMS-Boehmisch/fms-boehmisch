@@ -118,7 +118,7 @@ input:focus,textarea:focus{border-color:#c7d2fe; box-shadow:0 0 0 3px rgba(30,14
   border: none;
 }
 .btn-arbeiten:hover {
-  background: #4b42cc; /* dunkleres Lila beim Hover */
+  background: #1565c0; /* dunkleres Lila beim Hover */
 }
 
 
