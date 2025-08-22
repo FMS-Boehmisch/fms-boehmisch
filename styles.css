@@ -82,16 +82,17 @@ body.splash-done #splash{
   }
 }
 /* Hero */
-.hero{
-  background: repeating-linear-gardient(
-    45deg, 
-    #0f1320, 
-    #0f1320 10px, 
-    111a2b 10px, 
-    #111a2b 20px
-);
+.hero {
+  background: linear-gradient(135deg, #0f1320 25%, #111a2b 25%, #111a2b 50%, #0f1320 50%, #0f1320 75%, #111a2b 75%, #111a2b);
+  background-size: 40px 40px;
+  animation: move 4s linear infinite;
   color: #fff;
   padding: 84px 0 72px;
+}
+
+@keyframes move {
+  from { background-position: 0 0; }
+  to   { background-position: 40px 40px; }
 }
   
 .hero-content h1{font-size:38px; line-height:1.1; margin:0 0 12px}
