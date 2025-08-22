@@ -13,18 +13,23 @@ html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,
 
 .container{width:min(1100px, 92%); margin:auto}
 
-/* Splash */
-#splash{
-  position:fixed; inset:0;
-  background:radial-gradient(1200px 800px at 50% 35%, #184c84 0%, #0c2034 70%);
-  display:grid; place-items:center;
-  z-index:9999;
+/* Splash Hintergrund */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(1200px 800px at 50% 35%, #184c84 0%, #0c2034 70%);
+  display: flex;                 /* Flexbox nutzen */
+  justify-content: center;       /* Horizontal zentrieren */
+  align-items: center;           /* Vertikal zentrieren */
+  z-index: 9999;
 }
+
+/* Splash-Logo */
 .splash-logo img {
-  width: clamp(180px, 32vw, 480px);
-  max-width: 90vw;
+  width: clamp(180px, 40vw, 480px);
   height: auto;
-  object-fit: contain;
+  display: block;
+  margin: 0 auto;
   opacity: 0;
   transform: scale(.92);
   filter: drop-shadow(0 12px 36px rgba(0,0,0,.35));
