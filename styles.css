@@ -62,6 +62,12 @@ body.splash-done #splash{
 .burger{display:none;background:none;border:0;padding:6px;cursor:pointer}
 .burger span{display:block;width:22px;height:2px;background:#111;margin:5px 0}
 
+/* Logo im Header */
+.logo {
+  height: 40px;   /* Höhe des Logos */
+  width: auto;    /* Breite passt sich automatisch an */
+  display: block; /* sorgt für sauberes Verhalten */
+}
 /* Hero */
 .hero{
   background: radial-gradient(1200px 500px at 20% 0%, #111a2b 0, #0f1320 60%, #0f1320 100%);
