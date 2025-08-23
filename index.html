@@ -284,6 +284,26 @@ function showPreviews(files) {
 document.querySelector('input[type="file"][accept^="image/"]')
   ?.addEventListener('change', e => showPreviews(e.target.files));
 </script>
-
+<script>
+(function () {
+  try {
+    // Wenn Splash schon erledigt: sofort komplett aus
+    if (sessionStorage.getItem('splashDone') === '1') {
+      document.documentElement.classList.add('no-splash');
+      return;
+    }
+    // Sonst: Splash EINMAL anzeigen und danach markieren
+    window.addEventListener('load', function () {
+      // Zeit an deine CSS-Animation anpassen (hier ~1.1s)
+      setTimeout(function () {
+        // blendet #splash weich aus (du nutzt body.splash-done im CSS)
+        document.body.classList.add('splash-done');
+        // Merker setzen: in dieser Sitzung kein Splash mehr
+        sessionStorage.setItem('splashDone', '1');
+      }, 1100);
+    });
+  } catch (e) {}
+})();
+</script>
 </body>
 </html>
