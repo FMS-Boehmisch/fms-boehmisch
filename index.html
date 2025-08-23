@@ -11,6 +11,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <base href="/">
   <script defer data-domain="fms-boehmisch.de" src="https://plausible.io/js/script.js"></script>
+  <script>
+(function () {
+  try {
+    if (sessionStorage.getItem('splashDone') === '1') {
+      // Splash überall unterdrücken
+      document.documentElement.classList.add('no-splash');
+    }
+  } catch(e) {}
+})();
+</script>
 </head>
 <body>
   <!-- Intro Splash -->
