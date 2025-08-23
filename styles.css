@@ -112,6 +112,23 @@ h2{font-size:28px;margin:0 0 18px}
 .card h3{margin:0 0 6px}
 .badges{display:flex;gap:12px;flex-wrap:wrap;padding:0;list-style:none}
 .badges li{background:#eef2ff;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px}
+.card label { display:block; font-weight:600; margin:14px 0 8px; }
+.card input[type="file"] {
+  display:block;
+  width:100%;
+  padding:10px;
+  border:1px solid #e5e7eb;
+  border-radius:10px;
+  background:#fff;
+}
+.card input[type="file"]::-file-selector-button {
+  padding:8px 12px;
+  margin-right:10px;
+  border:1px solid #d1d5db;
+  border-radius:8px;
+  background:#f8fafc;
+  cursor:pointer;
+}
 
 /* Gallery */
 .gallery{grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
