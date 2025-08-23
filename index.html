@@ -166,24 +166,26 @@
             <textarea name="message" rows="5" required></textarea>
           </label>
           <!-- Fotos (öffnet auf dem Handy Kamera ODER Galerie) -->
+<!-- Fotos (Kamera/Galerie) -->
 <label>Fotos hinzufügen (Kamera/Galerie)
   <input
     type="file"
-    name="attachments[]"
+    name="attachment"
     accept="image/*"
     capture="environment"
     multiple>
 </label>
+
 <ul id="preview" style="display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 0;padding:0;list-style:none"></ul>
-<!-- Weitere Dateien (PDF, DOCX, ZIP, etc.) -->
+
+<!-- Weitere Dateien -->
 <label>Dateien anhängen (optional)
   <input
     type="file"
-    name="attachments[]"
+    name="attachment"
     accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.heic,.zip,.rar"
     multiple>
 </label>
-
 
           <!-- FormSubmit Optionen -->
           <input type="hidden" name="_subject" value="Neue Anfrage über fms-boehmisch.de">
