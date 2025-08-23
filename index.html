@@ -150,7 +150,12 @@
 
       <div class="contact-grid">
         <!-- Kontaktformular (FormSubmit – kein eigenes Backend nötig) -->
-        <form class="card" action="https://formsubmit.co/fmsboehmisch@web.de" method="POST">
+        <form class="card"
+      action="https://formsubmit.co/fmsboehmisch@web.de"
+      method="POST"
+      enctype="multipart/form-data"
+      accept-charset="UTF-8">
+
           <label>Ihr Name
             <input type="text" name="name" required>
           </label>
@@ -160,6 +165,25 @@
           <label>Nachricht
             <textarea name="message" rows="5" required></textarea>
           </label>
+          <!-- Fotos (öffnet auf dem Handy Kamera ODER Galerie) -->
+<label>Fotos hinzufügen (Kamera/Galerie)
+  <input
+    type="file"
+    name="attachments[]"
+    accept="image/*"
+    capture="environment"
+    multiple>
+</label>
+
+<!-- Weitere Dateien (PDF, DOCX, ZIP, etc.) -->
+<label>Dateien anhängen (optional)
+  <input
+    type="file"
+    name="attachments[]"
+    accept=".pdf,.doc,.docx,.xls,.xlsx,.png,.jpg,.jpeg,.heic,.zip,.rar"
+    multiple>
+</label>
+
 
           <!-- FormSubmit Optionen -->
           <input type="hidden" name="_subject" value="Neue Anfrage über fms-boehmisch.de">
@@ -211,5 +235,46 @@
 </script>
 
   <script src="app.js?v=1"></script>
+  <script>
+  // max 10 MB pro Datei, max 10 Dateien
+  const MAX_FILES = 10, MAX_MB = 10;
+  function validateFiles(input) {
+    if (!input.files) return;
+    if (input.files.length > MAX_FILES) {
+      alert(`Maximal ${MAX_FILES} Dateien pro Feld.`);
+      input.value = "";
+      return;
+    }
+    for (const f of input.files) {
+      if (f.size > MAX_MB * 1024 * 1024) {
+        alert(`"${f.name}" ist größer als ${MAX_MB} MB.`);
+        input.value = "";
+        return;
+      }
+    }
+  }
+  document.querySelectorAll('input[type="file"][name="attachments[]"]').forEach(el=>{
+    el.addEventListener('change', ()=>validateFiles(el));
+  });
+  </script>
+    <script>
+const previewUl = document.getElementById('preview');
+function showPreviews(files) {
+  if (!previewUl) return;
+  previewUl.innerHTML = "";
+  [...files].slice(0,12).forEach(f=>{
+    if (!f.type.startsWith('image/')) return;
+    const li = document.createElement('li');
+    const img = document.createElement('img');
+    img.style.width = "70px"; img.style.height = "70px";
+    img.style.objectFit = "cover"; img.style.borderRadius = "8px";
+    img.src = URL.createObjectURL(f);
+    li.appendChild(img); previewUl.appendChild(li);
+  });
+}
+document.querySelector('input[type="file"][accept^="image/"]')
+  ?.addEventListener('change', e => showPreviews(e.target.files));
+</script>
+
 </body>
 </html>
