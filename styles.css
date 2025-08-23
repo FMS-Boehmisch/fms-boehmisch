@@ -212,3 +212,5 @@ input:focus,textarea:focus{border-color:#c7d2fe; box-shadow:0 0 0 3px rgba(30,14
   width:40px; height:40px; border-radius:10px; cursor:pointer;
   box-shadow:0 6px 18px rgba(0,0,0,.2);
 }
+/* Splash komplett ausblenden, wenn in dieser Sitzung schon gezeigt */
+.no-splash #splash { display: none !important; }
