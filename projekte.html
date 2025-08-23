@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projekte – FMS Böhmisch</title>
+  <meta name="description" content="Bildergalerie: Projekte, Baustellen, Vorher-Nachher von FMS Böhmisch.">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="styles.css?v=1">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <base href="/">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="index.html#home">
+      <img src="ChatGPT Image 19. Aug. 2025, 17_18_58.png" alt="FMS Böhmisch" class="logo">
+    </a>
+    <nav id="nav">
+      <a href="index.html#leistungen">Leistungen</a>
+      <a href="index.html#ueber-uns">Über uns</a>
+      <a href="index.html#kontakt" class="btn">Kontakt</a>
+    </nav>
+    <button class="burger" aria-label="Menü öffnen" aria-controls="nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<section class="section gallery-hero">
+  <div class="container">
+    <h1>Projekte & Galerie</h1>
+    <p>Bilder aus vergangenen und aktuellen Baustellen. Tippe/klicke auf ein Bild für Vollansicht.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="grid gallery gallery-big">
+      <!-- Tausche die Dateinamen gegen deine JPG/PNG aus -->
+      <a href="ref1.jpg" class="glink"><img src="ref1.jpg" alt="Projekt 1" loading="lazy"></a>
+      <a href="ref2.jpg" class="glink"><img src="ref2.jpg" alt="Projekt 2" loading="lazy"></a>
+      <a href="ref3.jpg" class="glink"><img src="ref3.jpg" alt="Projekt 3" loading="lazy"></a>
+      <a href="ref4.jpg" class="glink"><img src="ref4.jpg" alt="Projekt 4" loading="lazy"></a>
+      <a href="ref5.jpg" class="glink"><img src="ref5.jpg" alt="Projekt 5" loading="lazy"></a>
+      <a href="ref6.jpg" class="glink"><img src="ref6.jpg" alt="Projekt 6" loading="lazy"></a>
+      <!-- beliebig erweitern … -->
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>© <span id="year"></span> FMS Böhmisch •
+      <a href="impressum.html">Impressum</a> •
+      <a href="datenschutz.html">Datenschutz</a>
+    </div>
+  </div>
+</footer>
+
+<!-- kleine Lightbox (ohne externe Lib) -->
+<div id="lightbox" class="lb" aria-hidden="true">
+  <button class="lb-close" aria-label="Schließen">×</button>
+  <img alt="">
+</div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Burger-Menü wie auf Startseite (falls du app.js hast, kannst du diesen Block weglassen)
+  const burger = document.querySelector('.burger');
+  const nav = document.getElementById('nav');
+  burger?.addEventListener('click', () => nav.classList.toggle('show'));
+
+  // Simple Lightbox
+  const lb = document.getElementById('lightbox');
+  const lbImg = lb.querySelector('img');
+  document.querySelectorAll('.glink').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      lbImg.src = a.getAttribute('href');
+      lb.setAttribute('aria-hidden','false');
+      document.body.style.overflow='hidden';
+    });
+  });
+  function closeLb(){
+    lb.setAttribute('aria-hidden','true');
+    lbImg.src='';
+    document.body.style.overflow='';
+  }
+  lb.addEventListener('click', (e)=>{ if(e.target===lb) closeLb(); });
+  lb.querySelector('.lb-close').addEventListener('click', closeLb);
+  window.addEventListener('keydown', e=>{ if(e.key==='Escape') closeLb(); });
+</script>
+</body>
+</html>
