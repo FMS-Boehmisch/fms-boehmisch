@@ -284,6 +284,21 @@ function showPreviews(files) {
 document.querySelector('input[type="file"][accept^="image/"]')
   ?.addEventListener('change', e => showPreviews(e.target.files));
 </script>
-
+<script>
+window.addEventListener('load', function () {
+  try {
+    if (!sessionStorage.getItem('splashDone')) {
+      // Nach deiner Einblend-Animation (#splashIn) ausblenden:
+      setTimeout(function () {
+        document.body.classList.add('splash-done'); // falls du das schon nutzt
+        sessionStorage.setItem('splashDone', '1');   // ab jetzt kein Splash mehr
+      }, 1100); // an deine Animationsdauer anpassen (ms)
+    } else {
+      // Falls der Splash im DOM ist, sofort unterdrücken
+      document.documentElement.classList.add('no-splash');
+    }
+  } catch(e) {}
+});
+</script>
 </body>
 </html>
