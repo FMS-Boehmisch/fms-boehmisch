@@ -214,3 +214,36 @@ input:focus,textarea:focus{border-color:#c7d2fe; box-shadow:0 0 0 3px rgba(30,14
 }
 /* Splash komplett ausblenden, wenn in dieser Sitzung schon gezeigt */
 .no-splash #splash { display: none !important; }
+
+.hero-new {
+  position: relative;
+  background: url('dein-bild.jpg') no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 140px 0;
+  text-align: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55); /* Abdunklung für Lesbarkeit */
+  padding: 60px 20px;
+}
+
+.hero-new h1 {
+  font-size: 42px;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.hero-new p {
+  font-size: 18px;
+  max-width: 720px;
+  margin: 0 auto 24px;
+}
+
+.hero-new .btn {
+  padding: 14px 20px;
+  font-size: 16px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
