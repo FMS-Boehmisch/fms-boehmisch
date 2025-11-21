@@ -2,298 +2,297 @@
 <html lang="de">
 <head>
   <meta charset="utf-8">
-  <title>FMS Böhmisch – Montage & Hausmeisterservice</title> 
+  <title>FMS Böhmisch – Fachbetrieb für Montage & Servicearbeiten</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="FMS Böhmisch – Fachbetrieb für Montage und Hausmeisterservice. Zuverlässig, fair und persönlich.">
+  <meta name="description" content="FMS Böhmisch – Fachbetrieb für Montage und Servicearbeiten: Hausmeisterservice, Gebäudereinigung, Gartenpflege, Kleinreparaturen, Entrümpelung und mehr im Raum Passau, Deggendorf & Pocking.">
   <link rel="icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.css">
-
-  <!-- Google Font -->
-  
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=2">
 </head>
 <body>
 
-  <!-- Navigation -->
-  <header class="header">
+  <!-- Kopfbereich / Navigation -->
+  <header class="site-header">
     <div class="container header-inner">
-      <div class="logo">
-      <!--hier <img src""-->
-        <span class="logo-mark">FMS</span>
-        <span class="logo-text">Böhmisch</span>
-      </div>
-
-      <nav class="nav">
+      <a class="brand" href="/">FMS Böhmisch -  <br> Fachbetrieb für Montage und Servicearbeiten <br></a>
+      <nav id="nav" class="main-nav">
         <a href="#leistungen">Leistungen</a>
-        <a href="#vorteile">Warum wir</a>
+        <a href="#warum-wir">Warum wir</a>
         <a href="#ablauf">Ablauf</a>
-        <a href="#bewertungen">Bewertungen</a>
-        <a href="#kontakt" class="nav-cta">Kontakt</a>
+        <a href="#kontakt" class="btn">Kontakt</a>
       </nav>
-
-      <button class="nav-toggle" aria-label="Menü öffnen">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero" id="top">
-    <div class="hero-gradient"></div>
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <p class="hero-kicker">Fachbetrieb für Montage & Service</p>
-        <h1>Ihr zuverlässiger Partner für Haus & Wohnung.</h1>
-        <p class="hero-subtitle">
-          Von Möbelaufbau über Lampenmontage bis hin zum Hausmeisterservice –
-          sauber, pünktlich und mit Blick fürs Detail.
+  <!-- Hero-Bereich -->
+  <main>
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Ihr zuverlässiger Partner für Haus & Wohnung.</h1>
+          <p class="hero-sub">
+            Von Möbelaufbau über Lampenmontage bis hin zum Hausmeisterservice – 
+            sauber, pünktlich und mit Blick fürs Detail.
+          </p>
+
+          <div class="hero-badges">
+            <span class="badge"><span class="badge-dot"></span> Faire Festpreise</span>
+            <span class="badge"><span class="badge-dot"></span> Kurzfristige Termine</span>
+            <span class="badge"><span class="badge-dot"></span> Regional & persönlich</span>
+          </div>
+
+          <div class="hero-ctas">
+            <a href="#kontakt" class="btn-primary">Unverbindliches Angebot anfragen</a>
+            <a href="#leistungen" class="btn-secondary">Leistungen ansehen</a>
+          </div>
+
+          <p class="hero-note">
+            Direkter Kontakt, ehrliche Beratung & saubere Ausführung.
+          </p>
+        </div>
+
+        <aside class="hero-card">
+          <h2>Schnellanfrage</h2>
+          <p>
+            Beschreiben Sie kurz Ihr Projekt – ich melde mich zeitnah bei Ihnen.
+          </p>
+          <a href="#kontakt" class="hero-card-btn">Anfrage starten</a>
+          <p class="hero-card-note">
+            Keine Sorge: Ihre Daten werden nur zur Kontaktaufnahme verwendet.
+          </p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Leistungen -->
+    <section id="leistungen" class="section">
+      <div class="container section-header">
+        <p class="section-kicker">Leistungen</p>
+        <h2>Professionelle Dienstleistungen für Haus, Wohnung und Außenbereiche.</h2>
+        <p class="section-sub">
+          Vom laufenden Hausmeisterservice über Gartenpflege bis hin zu Entrümpelungen – alles aus einer Hand.
         </p>
-        <div class="hero-actions">
-          <a href="#kontakt" class="btn btn-primary">Unverbindliches Angebot anfragen</a>
-          <a href="#leistungen" class="btn btn-ghost">Leistungen ansehen</a>
-        </div>
-        <div class="hero-badges">
-          <span>✔ Faire Festpreise</span>
-          <span>✔ Kurzfristige Termine</span>
-          <span>✔ Regional & persönlich</span>
-        </div>
       </div>
 
-      <div class="hero-card">
-        <h2>Schnellanfrage</h2>
-        <p>Beschreiben Sie kurz Ihr Projekt – ich melde mich zeitnah bei Ihnen.</p>
-        <form class="hero-form" action="#kontakt">
-          <input type="text" placeholder="Was soll gemacht werden? z.B. 3 Lampen montieren" required>
-          <input type="text" placeholder="PLZ / Ort" required>
-          <input type="tel" placeholder="Telefonnummer (für Rückruf)" required>
-          <button type="submit" class="btn btn-primary btn-full">
-            Anfrage starten
-          </button>
-        </form>
-        <p class="hero-note">Keine Sorge: Ihre Daten werden nur zur Kontaktaufnahme verwendet.</p>
+      <div class="container cards-grid">
+        <article class="card">
+          <div class="card-icon">HM</div>
+          <h3>Hausmeisterservice</h3>
+          <p>Regelmäßige Objektbetreuung, Wartung, Kleinreparaturen und Haustechnik-Kontrollen.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">GR</div>
+          <h3>Gebäudereinigung</h3>
+          <p>Treppenhaus-, Büro- und Glasreinigung – gründlich, zuverlässig und termingerecht.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">GP</div>
+          <h3>Gartenpflege</h3>
+          <p>Rasenmähen, Hecken- & Strauchschnitt, Beetpflege, Bewässerung & Saisonpflege.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">KM</div>
+          <h3>Kleinreparaturen & Montage</h3>
+          <p>Leuchtmittel, Schlösser, Silikonfugen, Beschläge, Sockelleisten, Möbel-/Regalmontage, Küchenmontage usw.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">OK</div>
+          <h3>Objektkontrollen & Schlüsseldienst</h3>
+          <p>Rundgänge, Dokumentation, Kontrolle von Mängeln, Tür-/Fensterkontrollen, Zählerstände.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">MM</div>
+          <h3>Müllmanagement</h3>
+          <p>Bereitstellung & Rückstellung, Reinigung der Standplätze, Sortier- und Sperrmüllhilfe.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">WP</div>
+          <h3>Wege- & Pflasterreinigung</h3>
+          <p>Kehr- und Hochdruckreinigung, Moos- & Unkrautentfernung auf Wegen und Höfen.</p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">EN</div>
+          <h3>Entrümpelung & Kleintransporte</h3>
+          <p>Keller, Garagen, Wohnungen – fachgerechte Entsorgung inkl. Übergabereinigung.</p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Leistungen -->
-  <section class="section" id="leistungen">
-  <div class="container">
-
-    <div class="section-header">
-      <h2>Unsere Leistungen</h2>
-      <p>Professionelle Dienstleistungen für Haus, Wohnung und Außenbereiche.</p>
-    </div>
-
-    <div class="grid grid-3">
-
-      <article class="card service-card">
-        <h3>Hausmeisterservice</h3>
-        <p>Regelmäßige Objektbetreuung, Wartung, Kleinreparaturen und Haustechnik-Kontrollen.</p>
-      </article>
-
-      <article class="card service-card">
-        <h3>Gebäudereinigung</h3>
-        <p>Treppenhaus-, Büro- und Glasreinigung – gründlich, zuverlässig und termingerecht.</p>
-      </article>
-
-      <article class="card service-card">
-        <h3>Gartenpflege</h3>
-        <p>Rasenmähen, Hecken- & Strauchschnitt, Beetpflege, Bewässerung & Saisonpflege.</p>
-      </article>
-
-      <article class="card service-card">
-        <h3>Kleinreparaturen & Montage</h3>
-        <p>Leuchtmittel, Schlösser, Silikonfugen, Beschläge, Sockelleisten, Möbel-/Regalmontage, Küchenmontage usw.</p>
-      </article>
-
-      <article class="card service-card">
-        <h3>Objektkontrollen & Schlüsseldienst</h3>
-        <p>Rundgänge, Dokumentation, Kontrolle von Mängeln, Tür-/Fensterkontrollen, Zählerstände.</p>
-      </article>
-
-      <article class="card service-card">
-        <h3>Müllmanagement</h3>
-        <p>Bereitstellung & Rückstellung, Reinigung der Standplätze, Sortier- und Sperrmüllhilfe.</p>
-      </article>
-
-      <article class="card service-card">
-        <h3>Wege- & Pflasterreinigung</h3>
-        <p>Kehr- und Hochdruckreinigung, Moos- & Unkrautentfernung auf Wegen und Höfen.</p>
-      </article>
-
-      <article class="card service-card">
-        <h3>Entrümpelung & Kleintransporte</h3>
-        <p>Keller, Garagen, Wohnungen – fachgerechte Entsorgung inkl. Übergabereinigung.</p>
-      </article>
-
-    </div>
-
-  </div>
-</section>
-
-  <!-- Vorteile -->
-  <section class="section section-alt" id="vorteile">
-    <div class="container">
-      <div class="section-header">
-        <h2>Darum FMS Böhmisch</h2>
-        <p>Ein Service, bei dem man sich vom ersten Kontakt an wohlfühlt.</p>
+    <!-- Warum wir -->
+    <section id="warum-wir" class="section section-soft">
+      <div class="container section-header">
+        <p class="section-kicker">Warum FMS Böhmisch</p>
+        <h2>Ein Service, bei dem man sich vom ersten Kontakt an wohlfühlt.</h2>
       </div>
 
-      <div class="grid grid-3">
-        <div class="pill-card">
+      <div class="container cards-grid three-cols">
+        <article class="card card-soft">
+          <p class="pill-label">Persönlich</p>
           <h3>Persönlicher Kontakt</h3>
           <p>Kein Callcenter, keine Nummer – Sie sprechen direkt mit dem, der die Arbeit ausführt.</p>
-        </div>
-        <div class="pill-card">
+        </article>
+
+        <article class="card card-soft">
+          <p class="pill-label">Sauber</p>
           <h3>Saubere Ausführung</h3>
           <p>Schuhe aus, Decken, Abdecken – ich hinterlasse Ihre Wohnung so ordentlich, wie ich sie vorfinden möchte.</p>
-        </div>
-        <div class="pill-card">
+        </article>
+
+        <article class="card card-soft">
+          <p class="pill-label">Transparent</p>
           <h3>Transparente Preise</h3>
           <p>Klare Preise vorab, keine versteckten Kosten. Auf Wunsch bekommen Sie ein schriftliches Angebot.</p>
-        </div>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Ablauf -->
-  <section class="section" id="ablauf">
-    <div class="container">
-      <div class="section-header">
-        <h2>So läuft ein Auftrag ab</h2>
-        <p>Einfach & unkompliziert – in drei Schritten.</p>
+    <!-- Ablauf -->
+    <section id="ablauf" class="section">
+      <div class="container section-header">
+        <p class="section-kicker">Ablauf</p>
+        <h2>So läuft ein Auftrag ab – einfach & unkompliziert.</h2>
       </div>
 
-      <ol class="steps">
-        <li>
-          <span class="steps-number">1</span>
-          <div>
-            <h3>Anfrage stellen</h3>
-            <p>Schreiben Sie mir über das Formular, per WhatsApp oder rufen Sie direkt an.</p>
-          </div>
-        </li>
-        <li>
-          <span class="steps-number">2</span>
-          <div>
-            <h3>Kurze Abstimmung</h3>
-            <p>Wir klären den Umfang, mögliche Termine und die Kosten – transparent und ehrlich.</p>
-          </div>
-        </li>
-        <li>
-          <span class="steps-number">3</span>
-          <div>
-            <h3>Ausführung vor Ort</h3>
-            <p>Ich komme zum vereinbarten Termin, erledige die Arbeit sauber und zuverlässig.</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
+      <div class="container steps-grid">
+        <article class="step-card">
+          <div class="step-number">1</div>
+          <h3>Anfrage stellen</h3>
+          <p>Schreiben Sie mir über das Formular, per WhatsApp oder rufen Sie direkt an.</p>
+        </article>
 
-  <!-- Bewertungen -->
-  <section class="section section-alt" id="bewertungen">
-    <div class="container">
-      <div class="section-header">
-        <h2>Was Kund:innen sagen</h2>
-        <p>Echte Rückmeldungen statt leeren Versprechen.</p>
+        <article class="step-card">
+          <div class="step-number">2</div>
+          <h3>Kurze Abstimmung</h3>
+          <p>Wir klären den Umfang, mögliche Termine und die Kosten – transparent und ehrlich.</p>
+        </article>
+
+        <article class="step-card">
+          <div class="step-number">3</div>
+          <h3>Ausführung vor Ort</h3>
+          <p>Ich komme zum vereinbarten Termin, erledige die Arbeit sauber und zuverlässig.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Bewertungen -->
+    <section id="bewertungen" class="section section-soft">
+      <div class="container section-header">
+        <p class="section-kicker">Bewertungen</p>
+        <h2>Was Kund:innen sagen.</h2>
+        <p class="section-sub">Echte Rückmeldungen statt leeren Versprechen.</p>
       </div>
 
-      <div class="grid grid-3">
-        <article class="card testimonial-card">
+      <div class="container testimonials-grid">
+        <article class="testimonial">
           <p class="testimonial-text">
             „Sehr freundlich, pünktlich und schnell. Unsere Lampen hängen perfekt – jederzeit wieder.“
           </p>
           <p class="testimonial-name">– Familie M., Passau</p>
         </article>
 
-        <article class="card testimonial-card">
+        <article class="testimonial">
           <p class="testimonial-text">
             „Möbelaufbau einer großen Schrankwand. Super sorgfältig gearbeitet, alles sauber hinterlassen.“
           </p>
           <p class="testimonial-name">– S. Böhm, Pocking</p>
         </article>
 
-        <article class="card testimonial-card">
+        <article class="testimonial">
           <p class="testimonial-text">
             „Top-Kommunikation, faire Preise und ein sehr angenehmer Umgang. Absolute Empfehlung.“
           </p>
           <p class="testimonial-name">– A. K., Umgebung Passau</p>
         </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Kontakt -->
-  <section class="section" id="kontakt">
-    <div class="container contact-layout">
-      <div class="contact-text">
-        <div class="section-header">
-          <h2>Kontakt & Anfrage</h2>
-          <p>Schreiben Sie mir kurz, was ich für Sie tun darf – ich melde mich zeitnah.</p>
-        </div>
-
-        <ul class="contact-list">
-          <li><strong>Telefon:</strong> <a href="tel:+4915156120527">+49 151 561 20527</a></li>
-          <li><strong>E-Mail:</strong> <a href="mailto:info@fms-boehmisch.de">info@fms-boehmisch.de</a></li>
-          <li><strong>Region:</strong> Raum & Stadt Passau / Raum & Stadt Deggendorf / Raum & Stadt Pocking</li>
-        </ul>
-
-        <p class="contact-note">
-          Alternativ können Sie mir auch eine WhatsApp-Nachricht mit Fotos senden – das erleichtert die Einschätzung.
+    <!-- Kontakt -->
+    <section id="kontakt" class="section">
+      <div class="container section-header">
+        <p class="section-kicker">Kontakt & Anfrage</p>
+        <h2>Was darf ich für Sie tun?</h2>
+        <p class="section-sub">
+          Schreiben Sie mir kurz, was ich für Sie tun darf – ich melde mich zeitnah.
         </p>
       </div>
 
-      <div class="card contact-card">
-        <form class="contact-form">
-          <label>
-            Name*
-            <input type="text" name="name" required>
-          </label>
-          <label>
-            E-Mail*
-            <input type="email" name="email" required>
-          </label>
-          <label>
-            Telefon (für Rückfragen)
-            <input type="tel" name="phone">
-          </label>
-          <label>
-            Nachricht*
-            <textarea name="message" rows="4" placeholder="Was soll gemacht werden? Wo befindet sich das Objekt?" required></textarea>
-          </label>
-          <button type="submit" class="btn btn-primary btn-full">
-            Nachricht senden
-          </button>
-          <p class="form-hint">Mit * gekennzeichnete Felder sind Pflichtfelder.</p>
-        </form>
+      <div class="container contact-grid">
+        <div class="contact-box">
+          <p><strong>Telefon:</strong> +49 151 561 20527</p>
+          <p><strong>E-Mail:</strong> info@fms-boehmisch.de</p>
+          <p class="contact-region">
+            <strong>Region:</strong><br>
+            Raum & Stadt Passau · Raum & Stadt Deggendorf · Raum & Stadt Pocking
+          </p>
+          <p class="contact-hint">
+            Alternativ können Sie mir auch eine <strong>WhatsApp-Nachricht mit Fotos</strong> senden – 
+            das erleichtert die Einschätzung.
+          </p>
+        </div>
+
+        <form class="contact-form" method="POST" action="https://formsubmit.co/info@fms-boehmisch.de">
+
+  <!-- Anti-Spam (Honeypot) -->
+  <input type="hidden" name="_honey" style="display:none">
+
+  <!-- Deaktiviere Captcha (sonst kommt ein Captcha) -->
+  <input type="hidden" name="_captcha" value="false">
+
+  <!-- Weiterleitung nach Erfolg -->
+  <input type="hidden" name="_next" value="https://fms-boehmisch.de/danke.html">
+
+  <div class="form-row">
+    <label for="name">Name*</label>
+    <input id="name" name="name" type="text" required>
+  </div>
+
+  <div class="form-row">
+    <label for="email">E-Mail*</label>
+    <input id="email" name="email" type="email" required>
+  </div>
+
+  <div class="form-row">
+    <label for="phone">Telefon (für Rückfragen)</label>
+    <input id="phone" name="phone" type="tel">
+  </div>
+
+  <div class="form-row">
+    <label for="message">Nachricht*</label>
+    <textarea id="message" name="message" required></textarea>
+  </div>
+
+  <button type="submit" class="btn-primary btn-full">Nachricht senden</button>
+
+  <p class="form-note">
+    Mit * gekennzeichnete Felder sind Pflichtfelder.  
+    Ihre Daten werden nur zur Kontaktaufnahme verwendet.
+  </p>
+
+</form>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
-  <div class="container footer-inner">
-    <p>© <span id="year"></span> FMS Böhmisch – Montage und Servicearbeiten</p>
-
-    <div class="footer-links">
-      <a href="impressum.html">Impressum</a>
-      <a href="datenschutz.html">Datenschutz</a>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> FMS Böhmisch – Montage und Servicearbeiten</div>
+      <div class="footer-links">
+        <a href="/impressum.html">Impressum</a>
+        <span>•</span>
+        <a href="/datenschutz.html">Datenschutz</a>
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
   <script>
-    // Aktuelles Jahr im Footer
     document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Mobile Navigation
-    const navToggle = document.querySelector('.nav-toggle');
-    const nav = document.querySelector('.nav');
-
-    navToggle.addEventListener('click', () => {
-      nav.classList.toggle('nav-open');
-      navToggle.classList.toggle('nav-open');
-    });
   </script>
 </body>
 </html>
