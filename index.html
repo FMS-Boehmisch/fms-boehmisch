@@ -241,10 +241,16 @@
   <!-- Anti-Spam (Honeypot) -->
   <input type="hidden" name="_honey" style="display:none">
 
-  <!-- Deaktiviere Captcha (sonst kommt ein Captcha) -->
+  <!-- Captcha deaktivieren -->
   <input type="hidden" name="_captcha" value="false">
 
-  <!-- Weiterleitung nach Erfolg -->
+  <!-- Betreff in der E-Mail -->
+  <input type="hidden" name="_subject" value="Neue Anfrage über fms-boehmisch.de">
+
+  <!-- Antwort-Adresse (damit du direkt auf den Kunden antworten kannst) -->
+  <input type="hidden" name="_replyto" value="info@fms-boehmisch.de">
+
+  <!-- Weiterleitung nach erfolgreichem Absenden -->
   <input type="hidden" name="_next" value="https://fms-boehmisch.de/danke.html">
 
   <div class="form-row">
@@ -273,7 +279,6 @@
     Mit * gekennzeichnete Felder sind Pflichtfelder.  
     Ihre Daten werden nur zur Kontaktaufnahme verwendet.
   </p>
-
 </form>
       </div>
     </section>
